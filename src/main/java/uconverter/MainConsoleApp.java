@@ -1,10 +1,11 @@
 package uconverter;
 
 import asg.cliche.ShellFactory;
+import uconverter.converters.core.UniversalConverter;
 
 import java.io.IOException;
 
-public class Main {
+public class MainConsoleApp {
 
     public static void main(String[] args) throws IOException {
         ShellFactory

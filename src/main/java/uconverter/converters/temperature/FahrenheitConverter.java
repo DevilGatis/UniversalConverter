@@ -1,6 +1,6 @@
-package uconverter;
+package uconverter.converters.temperature;
 
-public class FahrenheitUnitConverter extends UnitConverter {
+public class FahrenheitConverter extends AbstractTemperatureConverter {
     @Override
     public double toSI(double value) {
         return (value - 32.0) / 1.8 + 273.15;

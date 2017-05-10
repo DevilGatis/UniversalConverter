@@ -1,6 +1,6 @@
-package uconverter;
+package uconverter.converters.temperature;
 
-public class CelsiusUnitConverter extends UnitConverter {
+public class CelsiusConverter extends AbstractTemperatureConverter {
     @Override
     public double toSI(double value) {
         return value + 273.15;

@@ -1,6 +1,6 @@
-package uconverter;
+package uconverter.converters.temperature;
 
-public class KelvinUnitConverter extends UnitConverter {
+public class KelvinConverter extends AbstractTemperatureConverter {
     @Override
     public double toSI(double value) {
         return value;

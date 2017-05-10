@@ -1,15 +1,30 @@
-package uconverter;
+package uconverter.converters.core;
 
 import asg.cliche.Command;
+import uconverter.converters.length.InchesConverter;
+import uconverter.converters.length.MetersConverter;
+import uconverter.converters.length.MilesConverter;
+import uconverter.converters.temperature.CelsiusConverter;
+import uconverter.converters.temperature.FahrenheitConverter;
+import uconverter.converters.temperature.KelvinConverter;
+import uconverter.converters.weight.KilogramsConverter;
+import uconverter.converters.weight.PoundConverter;
+import uconverter.converters.weight.TonsConverter;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class UniversalConverter {
     private final List<UnitConverter> converters = Arrays.asList(
-            new CelsiusUnitConverter(),
-            new FahrenheitUnitConverter(),
-            new KelvinUnitConverter()
+            new CelsiusConverter(),
+            new FahrenheitConverter(),
+            new KelvinConverter(),
+            new InchesConverter(),
+            new MetersConverter(),
+            new MilesConverter(),
+            new KilogramsConverter(),
+            new PoundConverter(),
+            new TonsConverter()
     );
     private UnitConverter sourceConverter;
     private UnitConverter targetConverter;
@@ -56,6 +71,13 @@ public class UniversalConverter {
         if (trg == null) {
             throw new IllegalStateException("Target converter is not set");
         }
+        if (src.getUnitType() != trg.getUnitType()) {
+            throw new IllegalStateException("Source and Target converters are of different types");
+        }
+        return convert(src, trg, value);
+    }
+
+    public double convert(UnitConverter src, UnitConverter trg, double value) {
         double si = src.toSI(value);
         return trg.fromSI(si);
     }

@@ -1,8 +1,11 @@
-package uconverter;
+package uconverter.core;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import uconverter.converters.core.UnitConverter;
+import uconverter.converters.core.UnitType;
+import uconverter.converters.core.UniversalConverter;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -24,6 +27,17 @@ public class UniversalConverterTest {
         uconv.convert(0);
     }
 
+    @Test
+    public void convertDifferentConverters() throws Exception {
+        when(uconv.getSourceConverter()).thenReturn(source);
+        when(uconv.getTargetConverter()).thenReturn(target);
+        when(source.getUnitType()).thenReturn(UnitType.LENGTH);
+        when(target.getUnitType()).thenReturn(UnitType.WEIGHT);
+        exception.expect(IllegalStateException.class);
+        exception.expectMessage("Source and Target converters are of different types");
+
+        uconv.convert(0);
+    }
 
     @Test
     public void convertSourceNull() throws Exception {

@@ -1,11 +1,11 @@
-package uconverter;
+package uconverter.converters.temperature;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class KelvinUnitConverterTest {
-    private KelvinUnitConverter converter = new KelvinUnitConverter();
+public class KelvinConverterTest {
+    private KelvinConverter converter = new KelvinConverter();
 
     @Test
     public void toSI() throws Exception {

@@ -1,4 +1,4 @@
-package uconverter;
+package uconverter.converters.temperature;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,8 +10,8 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class CelsiusUnitConverterTest {
-    private CelsiusUnitConverter converter = new CelsiusUnitConverter();
+public class CelsiusConverterTest {
+    private CelsiusConverter converter = new CelsiusConverter();
     @Parameterized.Parameter(0)
     public double celsius;
     @Parameterized.Parameter(1)
