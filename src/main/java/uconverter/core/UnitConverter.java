@@ -1,4 +1,4 @@
-package uconverter.converters.core;
+package uconverter.core;
 
 public abstract class UnitConverter {
     public double toSI(double value) {

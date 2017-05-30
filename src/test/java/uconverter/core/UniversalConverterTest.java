@@ -3,17 +3,16 @@ package uconverter.core;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import uconverter.converters.core.UnitConverter;
-import uconverter.converters.core.UnitType;
-import uconverter.converters.core.UniversalConverter;
+import org.mockito.Mockito;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class UniversalConverterTest {
     @Rule
     public final ExpectedException exception = ExpectedException.none();
-    private final UniversalConverter uconv = spy(UniversalConverter.class);
+    private final UniversalConverter uconv = Mockito.spy(UniversalConverter.class);
     private final UnitConverter source = mock(UnitConverter.class);
     private final UnitConverter target = mock(UnitConverter.class);
 

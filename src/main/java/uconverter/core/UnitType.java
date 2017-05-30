@@ -1,4 +1,4 @@
-package uconverter.converters.core;
+package uconverter.core;
 
 public enum UnitType {
     TEMPERATURE("Temperature"),

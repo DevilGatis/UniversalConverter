@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import uconverter.converters.core.UnitType;
+import uconverter.core.UnitType;
 
 import java.io.IOException;
 

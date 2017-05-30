@@ -4,9 +4,9 @@ package uconverter.ui;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import uconverter.converters.core.UnitConverter;
-import uconverter.converters.core.UnitType;
-import uconverter.converters.core.UniversalConverter;
+import uconverter.core.UnitConverter;
+import uconverter.core.UnitType;
+import uconverter.core.UniversalConverter;
 
 import java.util.List;
 import java.util.stream.Collectors;

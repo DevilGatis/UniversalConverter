@@ -1,7 +1,7 @@
 package uconverter;
 
 import asg.cliche.ShellFactory;
-import uconverter.converters.core.UniversalConverter;
+import uconverter.core.UniversalConverter;
 
 import java.io.IOException;
 

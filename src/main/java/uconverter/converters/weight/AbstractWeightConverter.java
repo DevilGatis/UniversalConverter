@@ -1,7 +1,7 @@
 package uconverter.converters.weight;
 
-import uconverter.converters.core.UnitConverter;
-import uconverter.converters.core.UnitType;
+import uconverter.core.UnitConverter;
+import uconverter.core.UnitType;
 
 public abstract class AbstractWeightConverter extends UnitConverter {
     @Override

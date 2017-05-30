@@ -1,7 +1,7 @@
 package uconverter.converters.temperature;
 
-import uconverter.converters.core.UnitConverter;
-import uconverter.converters.core.UnitType;
+import uconverter.core.UnitConverter;
+import uconverter.core.UnitType;
 
 public abstract class AbstractTemperatureConverter extends UnitConverter {
     @Override

@@ -1,4 +1,4 @@
-package uconverter.converters.core;
+package uconverter.core;
 
 import asg.cliche.Command;
 import uconverter.converters.length.InchesConverter;
